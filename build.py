@@ -5,4 +5,4 @@
 print("This is developer build")
 print("for testing github hooks..")
 print("This is the new developer's commits")
-print("Testing for slack integration.")
+print("Testing for slack integration...")
