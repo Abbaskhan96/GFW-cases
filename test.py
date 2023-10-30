@@ -23,6 +23,10 @@ time.sleep(8)
 
 class TestCases(unittest.TestCase):
     def setUp(self):
+        
+        self.options= Options()
+        #self.options.add_argument("--headless")
+        #self.driver= webdriver.Chrome(options=self.options)
         self.driver= webdriver.Chrome()
         self.driver.get("https://gardenforwildlife.com")
         self.driver.maximize_window()
@@ -34,7 +38,8 @@ class TestCases(unittest.TestCase):
 
     def test_checkout(self):
         order_purchase= checkout(self.driver)
-        order_purchase.open_pdp()
+        order_purchase.open_pdp_product_plants()
+        order_purchase.checkout_page()
 
 
 if __name__ == "__main__":
