@@ -25,9 +25,9 @@ class TestCases(unittest.TestCase):
     def setUp(self):
         
         self.options= Options()
-        #self.options.add_argument("--headless")
-        #self.driver= webdriver.Chrome(options=self.options)
-        self.driver= webdriver.Chrome()
+        self.options.add_argument("--headless")
+        self.driver= webdriver.Chrome(options=self.options)
+        #self.driver= webdriver.Chrome()
         self.driver.get("https://gardenforwildlife.com")
         self.driver.maximize_window()
         self.driver.implicitly_wait(20)
